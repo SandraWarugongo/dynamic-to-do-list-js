@@ -1,3 +1,4 @@
+
 // Wait until the entire HTML page has loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Select important elements from the page
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create a new button element
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
-        removeButton.className = 'remove-btn';
+        removeButton.classList.add('remove-btn'); // <-- ✅ FIXED: use classList.add()
 
         // Assign an onclick event to remove the task
         removeButton.onclick = function () {
